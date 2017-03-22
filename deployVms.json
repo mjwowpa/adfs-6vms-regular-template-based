@@ -32,7 +32,7 @@
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('vmNamePrefix'),copyIndex(1))]",
-      "location": "local",
+      "location": "[parameters('resourceGroup().location')]",
       "copy": {
         "name": "addcCopy",
         "count": "[parameters('vmCount')]"
