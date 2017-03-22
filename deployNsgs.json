@@ -18,7 +18,7 @@
             "name": "Internal-sn-nsg",
             "apiVersion": "2015-06-15",
             "type": "Microsoft.Network/networkSecurityGroups",
-            "location": "[parameters('location')]",
+            "location": "[resourceGroup().location]",
             "properties": {
                 "securityRules": [
                     {
@@ -81,7 +81,7 @@
             "name": "DMZ-sn-nsg",
             "apiVersion": "2015-06-15",
             "type": "Microsoft.Network/networkSecurityGroups",
-            "location": "[parameters('location')]",
+            "location": "[resourceGroup().location]",
             "properties": {
                 "securityRules": [
                     {
