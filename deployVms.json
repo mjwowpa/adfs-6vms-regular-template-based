@@ -32,7 +32,7 @@
       "apiVersion": "2015-06-15",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('vmNamePrefix'),copyIndex(1))]",
-      "location": "[parameters('location')]",
+      "location": "local",
       "copy": {
         "name": "addcCopy",
         "count": "[parameters('vmCount')]"
@@ -54,7 +54,7 @@
             "publisher": "MicrosoftWindowsServer",
             "offer": "WindowsServer",
             "sku": "2016-Datacenter",
-            "version": "1.0.0"
+            "version": "latest"
           },
           "osDisk": {
             "name": "[concat(parameters('vmNamePrefix'),copyIndex(1),'-osdisk')]",
