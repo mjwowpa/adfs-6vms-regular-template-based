@@ -21,7 +21,7 @@
       "metadata": {
         "Description": "The type of the Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "Standard_LRS"
     }
   },
   "resources": [
@@ -29,7 +29,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[concat(parameters('storageAccountNamePrefix'),'1')]",
       "apiVersion": "2015-06-15",
-      "location": "[parameters('location')]",
+      "location": "[resourceGroup().location]",
       "properties": {
         "accountType": "[parameters('storageAccountType')]"
       }
@@ -38,7 +38,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[concat(parameters('storageAccountNamePrefix'),'2')]",
       "apiVersion": "2015-06-15",
-      "location": "[parameters('location')]",
+      "location": "[resourceGroup().location]",
       "properties": {
         "accountType": "[parameters('storageAccountType')]"
       }
@@ -47,7 +47,7 @@
       "type": "Microsoft.Storage/storageAccounts",
       "name": "[concat(parameters('storageAccountNamePrefix'),'3')]",
       "apiVersion": "2015-06-15",
-      "location": "[parameters('location')]",
+      "location": "[resourceGroup().location]",
       "properties": {
         "accountType": "Standard_LRS"
       }
