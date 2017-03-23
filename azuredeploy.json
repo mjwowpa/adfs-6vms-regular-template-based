@@ -155,21 +155,21 @@
       "metadata": {
         "description": "The vm size of the Domain Controllers"
       },
-      "defaultValue": "Standard_DS2_V2"
+      "defaultValue": "Standard_A1"
     },
     "adfsVMsSize": {
       "type": "string",
       "metadata": {
         "description": "The vm size of the ADFS servers"
       },
-      "defaultValue": "Standard_DS2_V2"
+      "defaultValue": "Standard_A1"
     },
     "wapVMsSize": {
       "type": "string",
       "metadata": {
         "description": "The vm size of the WAP servers"
       },
-      "defaultValue": "Standard_DS2_v2"
+      "defaultValue": "Standard_A1"
     },
     "adminUsername": {
       "type": "string",
@@ -187,7 +187,7 @@
     }
   },
   "variables": {
-    "baseUrl": "https://raw.githubusercontent.com/paulomarquesc/adfs-6vms-regular-template-based/master/",
+    "baseUrl": "https://raw.githubusercontent.com/mjwowpa/adfs-6vms-regular-template-based/master/",
     "storageAccountNamePrefix": "[concat(uniquestring(resourceGroup().id),'sa')]",
     "deployStorageAccountsUrl": "[concat(variables('baseUrl'),'/deployStorageAccounts.json')]",
     "deployPublicIPsUrl": "[concat(variables('baseUrl'),'/deployPublicIPs.json')]",
