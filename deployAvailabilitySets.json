@@ -14,7 +14,7 @@
       "type": "Microsoft.Compute/availabilitySets",
       "name": "[parameters('availabilitySetNames')[copyIndex()]]",
       "apiVersion": "2015-06-15",
-      "location": "[resourceGroup().location]",
+      "location": "local",
       "copy": {
         "name":"avsetCopy",
         "count": 3
